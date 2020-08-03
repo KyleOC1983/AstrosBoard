@@ -8,10 +8,18 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { LoginComponent } from './components/login/login.component';
+import { ForumsComponent } from './components/forums/forums.component';
+import { ThreadsComponent } from './components/threads/threads.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ForumsComponent,
+    ThreadsComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
