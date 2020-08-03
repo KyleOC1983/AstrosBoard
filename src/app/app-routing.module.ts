@@ -5,9 +5,9 @@ import { ForumsComponent } from './components/forums/forums.component';
 
 
 const routes: Routes = [
-  {path: 'Login', component: LoginComponent},
-  {path: 'Forums', component: ForumsComponent},
-  {path: '**', redirectTo: '/Login'},
+  {path: 'login', component: LoginComponent},
+  {path: 'forums', component: ForumsComponent},
+  {path: '**', redirectTo: '/login'},
 ];
 
 @NgModule({
