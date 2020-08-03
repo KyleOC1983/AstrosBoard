@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "astrosboard"
+    }
+  },
+  "defaultProject": "astrosboard",
+  "cli": {
+    "analytics": "7ef8a6e8-d122-4547-8661-5d7572d8e2b3"
+  }
 }
