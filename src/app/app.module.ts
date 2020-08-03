@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ForumsComponent } from './components/forums/forums.component';
 import { ThreadsComponent } from './components/threads/threads.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { ProfanityPipe } from './pipes/profanity.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostsComponent } from './components/posts/posts.component';
     LoginComponent,
     ForumsComponent,
     ThreadsComponent,
-    PostsComponent
+    PostsComponent,
+    ProfanityPipe
   ],
   imports: [
     BrowserModule,
