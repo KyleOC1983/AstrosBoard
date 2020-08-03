@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "astrosboard": {
+      "hosting": {
+        "astrosboard": [
+          "astrosboard"
+        ]
+      }
+    }
+  }
+}
