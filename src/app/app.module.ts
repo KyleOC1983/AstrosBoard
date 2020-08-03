@@ -29,9 +29,9 @@ import { ProfanityPipe } from './pipes/profanity.pipe';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFirestore
+    AngularFirestoreModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

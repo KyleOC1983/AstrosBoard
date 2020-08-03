@@ -9,6 +9,7 @@ export class ProfanityPipe implements PipeTransform {
 
   filter = new Filter(); 
 
+//adds any words listed under banned-words.ts to existing banned-words library
   transform(text: string, censor: boolean): string {
     this.filter.addWords(...banned)
     if(!censor){
