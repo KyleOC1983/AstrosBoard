@@ -30,7 +30,7 @@ export interface MessageThread {
 }
 
 const Threads: MessageThread[] = [
-  {date: 1, title: 'Hydrogen', user: 1.0079},
+  {date: 1, title: 'The Astros are the greatest', user: 'CrawfishBox'},
   {date: 2, title: 'Helium', user: 4.0026},
   {date: 3, title: 'Lithium', user: 6.941},
   {date: 4, title: 'Beryllium', user: 9.0122},
