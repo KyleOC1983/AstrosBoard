@@ -1,9 +1,12 @@
-  <mat-toolbar>
-    <mat-icon>grade</mat-icon>
-  <span>Astros Board</span>
+  <mat-toolbar class="toolBar">
+    <div class="hover" [routerLink]="['/login']">
+      <mat-icon >grade</mat-icon>
+      <span>Astros Board</span>
+    </div>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <button [routerLink]="['/forums']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
    <mat-icon>sports_baseball</mat-icon>
  </button>
 </mat-toolbar>
+
 <router-outlet></router-outlet>

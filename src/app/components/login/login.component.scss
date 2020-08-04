@@ -1,7 +1,17 @@
 body{
     background-image: url("/assets/images/astrosStar.png");
-    height: 650px;
     background-repeat: no-repeat;
     background-color: #003368;
     background-position: center;
+}
+.container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+}
+
+.button{
+    background-color: #eb6e1f;
+    color: white;
 }
