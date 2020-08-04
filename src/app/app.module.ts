@@ -13,6 +13,10 @@ import { ForumsComponent } from './components/forums/forums.component';
 import { ThreadsComponent } from './components/threads/threads.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { ProfanityPipe } from './pipes/profanity.pipe';
+import { AstrosComponent } from './components/astros/astros.component';
+import { MlbComponent } from './components/mlb/mlb.component';
+import { MinorsComponent } from './components/minors/minors.component';
+import { TherestComponent } from './components/therest/therest.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ProfanityPipe } from './pipes/profanity.pipe';
     ForumsComponent,
     ThreadsComponent,
     PostsComponent,
-    ProfanityPipe
+    ProfanityPipe,
+    AstrosComponent,
+    MlbComponent,
+    MinorsComponent,
+    TherestComponent
   ],
   imports: [
     BrowserModule,
