@@ -1,8 +1,11 @@
-<mat-card>Astros</mat-card>
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile class="astros"><button class="blueButton" [routerLink]="['/astros']" mat-raised-button>Astros</button></mat-grid-tile>
 
-<mat-card>Minors</mat-card>
+    <mat-grid-tile class="mlb"><button class="orangeButton" [routerLink]="['/mlb']"mat-raised-button>MLB</button></mat-grid-tile>
 
-<mat-card>MLB</mat-card>
-
-<mat-card>Everything Else</mat-card>
+    <mat-grid-tile class="minors"><button class="orangeButton" [routerLink]="['/minors']"mat-raised-button>Minors</button></mat-grid-tile>
+    
+    <mat-grid-tile class="else"><button class="blueButton" [routerLink]="['/therest']" mat-raised-button>The Rest</button></mat-grid-tile>
+  
+</mat-grid-list>
 
