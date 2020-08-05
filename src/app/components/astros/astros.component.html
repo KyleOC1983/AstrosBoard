@@ -1,3 +1,14 @@
+<mat-toolbar class="toolBar">
+  <div class="hover" [routerLink]="['/forums']">
+    <span>Astros Forum</span>
+  </div>
+<span class="example-spacer"></span>
+<button [routerLink]="['/threads']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+ <mat-icon>add_circle</mat-icon>
+</button>
+</mat-toolbar>
+
+
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   

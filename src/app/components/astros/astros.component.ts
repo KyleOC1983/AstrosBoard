@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { PostsnthreadsService } from 'src/app/services/postsnthreads.service';
+
 
 @Component({
   selector: 'app-astros',
@@ -14,7 +16,16 @@ export class AstrosComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(private postsNThreadsService: PostsnthreadsService) { }
+
+  addNewThread(date: Date, title: string, user: string, forum: string){
+    this.postsNThreadsService.newThread(date, title, user, forum);   
+  }
+
+  removeThread(id: string){
+    this.postsNThreadsService.deleteThread(id);
+  }
+
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;

@@ -1,3 +1,16 @@
 table {
     width: 100%;
   }
+
+.toolBar{
+    background-color: #003368;
+    color: white;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.hover:hover{
+  cursor: pointer;
+}

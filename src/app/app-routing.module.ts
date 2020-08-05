@@ -6,11 +6,13 @@ import { AstrosComponent } from './components/astros/astros.component';
 import { MlbComponent } from './components/mlb/mlb.component';
 import { MinorsComponent } from './components/minors/minors.component';
 import { TherestComponent } from './components/therest/therest.component';
+import { ThreadsComponent } from './components/threads/threads.component';
 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'forums', component: ForumsComponent},
+  {path: 'threads', component: ThreadsComponent},
   {path: 'astros', component: AstrosComponent},
   {path: 'mlb', component: MlbComponent},
   {path: 'minors', component: MinorsComponent},
