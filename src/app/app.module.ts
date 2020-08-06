@@ -17,6 +17,7 @@ import { AstrosComponent } from './components/astros/astros.component';
 import { MlbComponent } from './components/mlb/mlb.component';
 import { MinorsComponent } from './components/minors/minors.component';
 import { TherestComponent } from './components/therest/therest.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TherestComponent } from './components/therest/therest.component';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   
   providers: [],

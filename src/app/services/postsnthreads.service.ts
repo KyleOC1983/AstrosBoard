@@ -17,12 +17,13 @@ export class PostsnthreadsService {
     return this.firestore.collection('posts').valueChanges();
   };
 
-  newThread(date: Date, title: string, user: string, forum: string){
+  newThread(title: string, user: string, post: string){
+    console.log(title, user, post);
      this.firestore.collection('threads').add({
-      date: Date,
+      date: new Date(),
       title: title,
       user: user,
-      forum: forum, 
+      post: post, 
     })
   };
 
@@ -32,13 +33,12 @@ export class PostsnthreadsService {
     })
   };
 
-  newPost(date: Date, user: string, post: string, threadId: string, forum: string){
+  newPost(date: Date, user: string, post: string, threadId: string){
     this.firestore.collection('posts').add({
       date: Date,
       user: user,
       post: post,
       threadId: threadId,
-      forum: forum,
     })
   };
 

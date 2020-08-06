@@ -4,5 +4,4 @@ export interface MessageThread {
     title: string;
     user: string;
     post: string;
-    forum: string;
   }
