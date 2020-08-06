@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostsnthreadsService } from 'src/app/services/postsnthreads.service';
 
 @Component({
   selector: 'app-threads',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreadsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private postsNThreadsService: PostsnthreadsService) { }
+
+  addNewThread(date: Date, title: string, user: string, forum: string){
+    this.postsNThreadsService.newThread(date, title, user, forum);   
+  }
 
   ngOnInit(): void {
   }

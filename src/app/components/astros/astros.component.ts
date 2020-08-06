@@ -12,7 +12,7 @@ import { PostsnthreadsService } from 'src/app/services/postsnthreads.service';
 export class AstrosComponent implements OnInit {
 
   displayedColumns: string[] = ['date', 'title', 'user'];
-  dataSource = new MatTableDataSource<MessageThread>(Threads);
+  dataSource = new MatTableDataSource<ThreadPost>(Threads);
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
@@ -33,17 +33,17 @@ export class AstrosComponent implements OnInit {
 
 }
 
-export interface MessageThread {
+export interface ThreadPost {
   title: string;
   //todo udpate date to type date and user to string
   date: any;
   user: any;
 }
 
-const Threads: MessageThread[] = [
-  {date: 1, title: 'The Astros are the greatest', user: 'CrawfishBox'},
-  {date: 2, title: 'Helium', user: 4.0026},
-  {date: 3, title: 'Lithium', user: 6.941},
+const Threads: ThreadPost[] = [
+  {date: '1 hour ago', title: 'The Astros are the greatest', user: 'CrawfishBox'},
+  {date: '2 days ago', title: 'Rangers Suck', user: 'HouCounterPlot'},
+  {date: '5 days ago', title: 'Yankees Cry alot', user: 'Jeff Blogwell'},
   {date: 4, title: 'Beryllium', user: 9.0122},
   {date: 5, title: 'Boron', user: 10.811},
   {date: 6, title: 'Carbon', user: 12.0107},
