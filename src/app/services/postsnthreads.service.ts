@@ -6,19 +6,25 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class PostsnthreadsService {
-
+  // create currentThread variable
+  currentThread: string = '';
+  currentTitle: string = '';
   constructor(private firestore: AngularFirestore) { }
 
   get messageThread(){
-    return this.firestore.collection('threads').valueChanges();
+    return this.firestore.collection('threads').valueChanges({idField: 'id'});
   };
 
   get messagePost(){
-    return this.firestore.collection('posts').valueChanges();
+    return this.firestore.collection('posts').valueChanges({idField: 'id'});
   };
-
+  
+  // Create a getter for posts by threadID (using currentThread variable)
+  getPostById(){
+    return this.firestore.collection('posts', ref => ref.where('threadId', '==', this.currentThread)).valueChanges({idField: 'id'});
+  };
+  
   newThread(title: string, user: string, post: string){
-    console.log(title, user, post);
      this.firestore.collection('threads').add({
       date: new Date(),
       title: title,
@@ -33,13 +39,15 @@ export class PostsnthreadsService {
     })
   };
 
-  newPost(date: Date, user: string, post: string, threadId: string){
+  newPost(user: string, post: string){
+    if(this.currentThread){
     this.firestore.collection('posts').add({
-      date: Date,
+      date: new Date,
       user: user,
       post: post,
-      threadId: threadId,
+      threadId: this.currentThread
     })
+  }
   };
 
   deletePost(id: string){

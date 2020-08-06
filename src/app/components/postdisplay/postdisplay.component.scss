@@ -1,0 +1,23 @@
+.example-card {
+    width: 90%;
+    border: 2px solid black;
+  }
+  
+  .parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003368;
+  }
+
+
+
+.toolBar{
+    background-color: #003368;
+    color: white;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+

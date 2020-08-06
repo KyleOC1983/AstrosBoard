@@ -1,1 +1,11 @@
-<p>posts works!</p>
+<div class="parent">
+    <!-- <form class="example-form"> -->   
+        <mat-form-field class="example-full-width">
+          <mat-label>Type Post Here</mat-label>
+          <textarea matInput [(ngModel)]="post" name="post"></textarea>
+        </mat-form-field>
+      <!-- </form> -->
+      <button mat-raised-button class="blueButton" (click)="addNewPost()">Post</button>
+      <button mat-raised-button class="blueButton" (click)="cancel()">Cancel</button>
+    </div>
+    <div class="background"></div>

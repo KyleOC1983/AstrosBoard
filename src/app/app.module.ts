@@ -18,6 +18,8 @@ import { MlbComponent } from './components/mlb/mlb.component';
 import { MinorsComponent } from './components/minors/minors.component';
 import { TherestComponent } from './components/therest/therest.component';
 import { FormsModule } from '@angular/forms';
+import { PostdisplayComponent } from './components/postdisplay/postdisplay.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     AstrosComponent,
     MlbComponent,
     MinorsComponent,
-    TherestComponent
+    TherestComponent,
+    PostdisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    
   ],
   
   providers: [],
