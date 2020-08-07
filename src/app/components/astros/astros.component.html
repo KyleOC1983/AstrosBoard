@@ -3,6 +3,9 @@
     <span>Astros Forum</span>
   </div>
 <span class="example-spacer"></span>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="['/forums']" >
+  <mat-icon>keyboard_return</mat-icon>
+</button>
 <button [routerLink]="['/threads']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
  <mat-icon>add_circle</mat-icon>
 </button>
@@ -10,11 +13,11 @@
 
 
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="hover">
+    <table mat-table [dataSource]="dataSource" class="hover" matSort matSortActive="date" matSortDirection="desc">
   
       <!-- Date Column -->
       <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
         <td mat-cell *matCellDef="let element"> {{element.date.toDate() | date:'short'}} </td>
       </ng-container>
   

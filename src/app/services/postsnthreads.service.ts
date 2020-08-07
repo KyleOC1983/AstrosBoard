@@ -21,7 +21,7 @@ export class PostsnthreadsService {
   
   // Create a getter for posts by threadID (using currentThread variable)
   getPostById(){
-    return this.firestore.collection('posts', ref => ref.where('threadId', '==', this.currentThread)).valueChanges({idField: 'id'});
+    return this.firestore.collection('posts', ref => ref.where('threadId', '==', this.currentThread).orderBy('date')).valueChanges({idField: 'id'});
   };
   
   newThread(title: string, user: string, post: string){

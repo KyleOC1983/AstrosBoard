@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'mlb', component: MlbComponent},
   {path: 'minors', component: MinorsComponent},
   {path: 'therest', component: TherestComponent},
-  {path: '**', redirectTo: '/login'},
+  {path: '**', redirectTo: '/forums'},
 ];
 
 @NgModule({
