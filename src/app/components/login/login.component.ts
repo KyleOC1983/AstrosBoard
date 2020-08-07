@@ -14,7 +14,10 @@ export class LoginComponent implements OnInit {
 
   login(){
       this.auth.signInWithPopup(new auth.GoogleAuthProvider()).then(res=> this.router.navigate(['/forums']));
+  }
 
+  logOut(){
+    this.auth.signOut();
   }
   
 

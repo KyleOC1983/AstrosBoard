@@ -5,7 +5,9 @@
           <textarea matInput [(ngModel)]="post" name="post"></textarea>
         </mat-form-field>
       <!-- </form> -->
-      <button mat-raised-button class="blueButton" (click)="addNewPost()">Post</button>
-      <button mat-raised-button class="blueButton" (click)="cancel()">Cancel</button>
+      <div class="inline">
+        <button mat-raised-button class="blueButton" (click)="addNewPost()">Post</button>
+        <button mat-raised-button class="blueButton" (click)="cancel()">Cancel</button>
+      </div>
     </div>
     <div class="background"></div>

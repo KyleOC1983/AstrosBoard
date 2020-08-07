@@ -34,8 +34,12 @@
   .blueButton{
     background-color: #003368;
     color: white;
-    height: 20%;
-    width: 20%;
+    height: 65px;
+    width: 130px;
     font-size: medium;
-    margin-bottom: 30px;
+    margin: 30px 15px 30px 15px;
+}
+
+.inline{
+  flex-direction: row;
 }
