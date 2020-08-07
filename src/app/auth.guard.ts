@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
         if(user){
           return true;
         }
-        this.snackbar.open("Must Log in to Post", null, {
+        this.snackbar.open("Please Log In Through Google To Post", null, {
           duration: 5000,
         })
         this.router.navigate(['login'])

@@ -23,6 +23,10 @@ export class PostsnthreadsService {
   getPostById(){
     return this.firestore.collection('posts', ref => ref.where('threadId', '==', this.currentThread).orderBy('date')).valueChanges({idField: 'id'});
   };
+
+  getThreadById(){
+    return this.firestore.collection('threads').doc(this.currentThread).valueChanges();
+  }
   
   newThread(title: string, user: string, post: string){
      this.firestore.collection('threads').add({

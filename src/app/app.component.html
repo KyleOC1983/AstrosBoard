@@ -1,9 +1,12 @@
   <mat-toolbar class="toolBar">
-    <div class="hover" [routerLink]="['/login']">
+    <div class="hover" [routerLink]="['/forums']">
       <mat-icon >grade</mat-icon>
       <span>Astros Board</span>
     </div>
   <span class="example-spacer"></span>
+  <button [routerLink]="['/login']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>face</mat-icon>
+  </button>
   <button [routerLink]="['/forums']" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
    <mat-icon>sports_baseball</mat-icon>
  </button>

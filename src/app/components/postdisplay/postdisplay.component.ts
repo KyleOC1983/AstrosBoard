@@ -19,9 +19,10 @@ export interface DialogData {
 export class PostdisplayComponent implements OnInit {
 
   posts: any;
-  threadTitle: string;
+  thread: any;
+
   constructor(private postNThreadService: PostsnthreadsService, private router: Router, public dialog: MatDialog) { 
-    this.threadTitle = this.postNThreadService.currentTitle;
+    
   }
 
   openDialog(): void {
@@ -39,7 +40,8 @@ export class PostdisplayComponent implements OnInit {
       this.router.navigate(['/astros']);
     }
     else{
-    // Subscribe to the byTHreadID getter in the service and display like you do in the astros component
+    this.postNThreadService.getThreadById().subscribe((v: ThreadPost)=>
+    this.thread = v);
     this.postNThreadService.getPostById().subscribe((v: ThreadPost[])=>{
       this.posts = v;
     })

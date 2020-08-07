@@ -1,6 +1,6 @@
 <mat-toolbar class="toolBar">
     <div >
-        <span>{{threadTitle}}</span>
+        <span>{{thread.title}}</span>
     </div>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="['/astros']" >
@@ -10,6 +10,20 @@
         <mat-icon>add_circle</mat-icon>
     </button>
 </mat-toolbar>
+
+<div class="parent" >
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{thread.user}}</mat-card-title>
+            <mat-card-subtitle>{{thread.date.toDate() | date:'short'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{thread.post}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
 
 
 <div class="parent" *ngFor="let post of posts">

@@ -1,8 +1,10 @@
 <body>
     <div class="container">
         
-        <button (click)="login()" class="button" mat-raised-button>Login with Google</button>
+        <button *ngIf="logged" (click)="login()" class="button" mat-raised-button>Login with Google</button>
+        <button *ngIf="!logged" (click)="logOut()" class="button" mat-raised-button>Log Out</button>
                 
        
     </div>  
+    
 </body>
